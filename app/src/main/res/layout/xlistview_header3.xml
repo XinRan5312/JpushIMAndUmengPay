@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<ImageView-->
+    <!--android:id="@+id/ima"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="100dp"-->
+    <!--android:src="@mipmap/ic_launcher" />-->
+    <com.engloryintertech.small.ui.HorizontalListView
+        android:id="@+id/horizon_listview"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/horizon_height"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp">
+
+    </com.engloryintertech.small.ui.HorizontalListView>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_above="@+id/line_laba"
+        android:background="@color/view">
+
+    </View>
+
+    <LinearLayout
+        android:id="@+id/line_laba"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/horizon_listview"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:src="@mipmap/home_laba" />
+
+        <com.engloryintertech.small.ui.AutoTextView
+            android:id="@+id/tv_ad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_home_devider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/line_laba"
+        android:background="@color/view">
+
+    </View>
+
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorBlack">#000000</color>
+    <color name="codoon_split_edge">#d9d9d9</color>
+
+    <!--登录界面颜色值-->
+    <color name="login_regist">#FFFFFF</color>
+    <color name="seek_title">#ffb301</color>
+    <color name="btn_text_color">#e5e1d7</color>
+    <color name="reset_pwd">#929292</color>
+    <color name="reset_devider">#e7e4e4</color>
+    <!--首页-->
+    <color name="main_shou_h">#f1b861</color>
+    <color name="main_shou_n">#98A1A4</color>
+    <color name="tv_location">#736e6a</color>
+    <color name="view">#f1f2f6</color>
+    <!--我的-->
+    <color name="mine_bg">#f1f2f6</color>
+    <color name="settin_back_color">#ebebeb</color>
+    <color name="application_setting_bt_pressed">#F5F5F5</color>
+    <color name="application_setting_bt_Unpressed">#ffffff</color>
+    <!--地址-->
+    <color name="location_view_height">#eff0f4</color>
+    <color name="location_service">#e1e4e9</color>
+    <!--个人设置 EditText Hint -->
+    <color name="setting_edit_hint_color">#cacad8</color>
+
+    <color name="comment_detail_backgorund">#f6f6f6</color>
+    <color name="gray_line">#bfbfbf</color>
+</resources>

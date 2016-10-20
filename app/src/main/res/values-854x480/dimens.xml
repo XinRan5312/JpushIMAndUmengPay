@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--登录-->
+    <dimen name="view_login_width">60dp</dimen>
+    <dimen name="view__login_height">3dp</dimen>
+    <dimen name="view__devider">1dp</dimen>
+    <dimen name="text_login_regist">20sp</dimen>
+    <!--login_fragment-->
+    <dimen name="login_farg">40dp</dimen>
+    <dimen name="login_farg_top">20dp</dimen>
+    <dimen name="line_pwd">15dp</dimen>
+    <dimen name="line_view">80dp</dimen>
+    <dimen name="btn_login">30dp</dimen>
+    <dimen name="btn_login_top">20dp</dimen>
+    <!--login_third-->
+    <dimen name="third_top">10dp</dimen>
+    <dimen name="third_text">5dp</dimen>
+    <dimen name="third_text_size">15sp</dimen>
+    <dimen name="third_login">50dp</dimen>
+    <dimen name="third_login_heigh">30dp</dimen>
+    <!--register_fragment-->
+    <dimen name="register_frag">40dp</dimen>
+    <dimen name="register_frag_top">20dp</dimen>
+    <dimen name="line_code">15dp</dimen>
+    <dimen name="regist_view">80dp</dimen>
+    <dimen name="regist_pwd_top">20dp</dimen>
+    <dimen name="btn_regist">30dp</dimen>
+    <dimen name="btn_regist_top">20dp</dimen>
+    <!--reset_pwd-->
+    <dimen name="tv_forget">20sp</dimen>
+    <dimen name="reset_back">10dp</dimen>
+    <dimen name="reset_margin">20dp</dimen>
+    <dimen name="reset_phone_margin">10dp</dimen>
+    <dimen name="reset_code_top">20dp</dimen>
+    <dimen name="reset_view_right">90dp</dimen>
+    <dimen name="reset_view_bottom">20dp</dimen>
+    <dimen name="reset_et_bottom">20dp</dimen>
+    <dimen name="btn_reset">20dp</dimen>
+    <dimen name="title_bar_height">48dp</dimen>
+</resources>

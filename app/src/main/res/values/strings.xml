@@ -1,0 +1,87 @@
+<resources>
+    <string name="app_name">SMall</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="loading">正在加载...</string>
+    <string name="logining">正在登录...</string>
+    <string name="operation_failed">操作失败,发生未知错误</string>
+    <string name="network_connection_failed">网络连接失败，请检查网络</string>
+    <string name="network_not_connected">网络未连接</string>
+    <!--登录界面 注册-->
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="my_tel">手机号</string>
+    <string name="my_pwd">密码</string>
+    <string name="show_pwd">显示密码</string>
+    <string name="forget_pwd">忘记密码</string>
+    <string name="choose_login">选择登录方式</string>
+    <string name="verification_code">验证码</string>
+    <string name="gain_code">获取验证码</string>
+    <string name="agree_agreement">注册意味着你阅读并同意《用户注册协议》</string>
+    <string name="telephone_isempty">手机号不能为空</string>
+    <string name="telephone_iscoorrect">请输入正确手机号</string>
+    <string name="code_isempty">验证码不能为空</string>
+    <string name="password_isempty">密码不能为空</string>
+
+    <!--找回密码-->
+    <string name="seek_pwd">忘记密码</string>
+    <string name="seek_tel">手机号</string>
+    <string name="seek_code">验证码</string>
+    <string name="seek_new_pwd">密码</string>
+    <string name="agree_reset">重置密码</string>
+    <!--首屏-->
+    <string name="main_shou">首页</string>
+    <string name="main_find">发现</string>
+    <string name="main_user">我的</string>
+    <!--我的界面-->
+    <string name="mine_zhangben">账本</string>
+    <string name="mine_dingdan">订单</string>
+    <string name="mine_fuwu">服务</string>
+    <string name="mine_dongtai">动态</string>
+    <string name="mine_friends">好友</string>
+    <string name="mine_tuiguang">推广</string>
+    <string name="mine_money">赚钱秘籍</string>
+    <string name="mine_sport">活动专区</string>
+    <string name="mine_setting">设置</string>
+    <string name="mine_question">常见问题</string>
+    <string name="mine_about">关于我们</string>
+    <!--发现界面-->
+    <string name="find_news">消息</string>
+    <!--服务地址-->
+    <string name="choice_location">选择服务地址</string>
+    <string name="add_location">新增地址</string>
+    <string name="mime_location">我的地址</string>
+    <string name="near_location">附近地址</string>
+    <string name="current_location">点击选择当前位置</string>
+    <!--新增地址-->
+    <string name="add_newlocal">新增收货地址</string>
+    <string name="add_save">保存</string>
+    <string name="add_contact">联系人</string>
+    <string name="add_name">姓名:</string>
+    <string name="add_name_hint">请填写收货人的姓名</string>
+    <string name="add_phone">电话:</string>
+    <string name="add_phone_hint">请填写收货手机号码</string>
+    <string name="add_mr">先生</string>
+    <string name="add_ms">女士</string>
+    <string name="location">收货地址</string>
+    <string name="school">小区/大厦/学校:</string>
+    <string name="school_hint">点击选择</string>
+    <string name="door">楼号-门牌号:</string>
+    <string name="door_hint">例:16号楼427室</string>
+    <!--xlistviex刷新加载-->
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载...</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">查看更多</string>
+    <string name="xlistview_footer_hint_nomore">暂无更多</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+
+    <!-- WXPayEntryActivity -->
+    <string name="pay_result_tip">这个界面用于显示第三方app通过微信支付的结果</string>
+    <string name="pay_result_callback_msg" formatted="false">微信支付结果：%s</string>
+    <string name="app_tip">提示</string>
+    <string name="sty_value">MIICdwIBADANBgkqhkiG9w0BAQEFAASCAmEwggJdAgEAAoGBAMSmfoPyUTe7HFfmzNFOFmfodgRQAVHucTigyOoqrJV1KdGB+ZSulb5/qs8muJBKsxE0gERMxgEfZtwQ2Uri7pEvVp+EHGJK+SDYM5LB6cpDsO85OGdYfJKXa+/cSP8taPaIzyAIMlAGd9h9bayfASR4dqBHzbrVuJRnNODPON2FAgMBAAECgYAeqogYM3WO51LoMknGahL8aTfePEu4ZyKo3gn22mjHddnrngU5tnALoQUWAMfPWJbMHA/UltRZ4He94bLBBtqE64xtQEoDBHNUuTx4yWJGHtFA/Iz83QvbfvC6GzSBjPUb1aytFBpbjqBCvu2sSmFNxTAzFVxkuEfqdlE/xC3hgQJBAOOcf20xoKDpLMGUls03y68a+kF41hkyWjnFUooIxm4Eg6DRfp2GHjatkOY2HEaHrFQQaSsagir8aehPABoPnRkCQQDdLW45Zx3iA0ylq6iL6gQp/kP6GoJ3rppJgYQS3Ju0TeKOAJFEAt9Tc60b90H9wegy4NkW5t7GRd3KQJpVoiVNAkBauqtgz4OEIO6iS6TBMRiUOGDBcHWHnbaxiKKaO109xbbiiB+8kxXAHffAjJlA1Bwxdkk10V9J20wsOjGEMe0hAkEAoxioKi4u7AYw1A4EKMB1N54m9FvuD2EypreZ8+q36rpwMPScKkHP+xLW+UNYZ05A8pu5mdi/OAg3J7iB1lnOFQJBAMqmJHg+EAfGgXNbfnO/YnkM+oA1gAeX5ky2qkxgnIN9g8vN6pjHI00W0XTDYwcaA7aYUoit10soPqq70lClwCk=</string>
+    <string name="sty_value_test">MIICWwIBAAKBgQDqQoA3tsOvps3Ue1Jz66awsgjZ5/xm4mLyt8W5CoDb8K20WQmtbIOc9uO4g7ZzvY8kZKzg4BzMG+hjl03qP57uC72j3PDzhZbGoyb+r5XuInhDQruxH1+P4+StTLKHvvyLx9yt9RszVCMCwGlvfA5Q+JP7uXSuVr9cw4Kisyu1lQIDAQABAoGAAyjqedXpRdFGLXuMXSvsj62XGPlcGjcrhoKcFCbkHhNdBHW+/6vbCp756187csw3xhHlkxLy0H3/4HgGAQbiqeS7WJWI7V8ydoEgwBw+2dhvGlI964UT06a73cjs4agi9qIJlNC9rZliwXqJBe05rogWmIop3EMVlqxOcOpwuwECQQD2k8hft+Y13iDvte928gdjOrHGRQ5f5/m4eNJ5uSJCHDnHaRXbw4Efz9yJo93aMdD0Nae4ru9i1IknkeFMdzTlAkEA8zY351r2G6R2U4M8G/tU/9Ws5c4paMdNm+xIo94BkrSolvpMIeMua9LmITJSbdkYaNH7vzVnzSe2GeFXu/Ki8QJAeFohjza/ksNc6COxQilYGcLoSpIiNgWQCc5PTUJjykjkmsRb+uwt9k0Ko9Pr0ThHeStHNgmMpnx+hWXaxevZUQJAf8Ovwn3qY8MV1fFPFnQFxw/88AxJfJ2Wi56o2ky6DtOQ7R8392Vc8Y+tDSteWg594DLPSTdI/GEsLJRQfo+MQQJADRSUo/PZFQTxHVOaYDwNGWXfySi8+MnNACLCM0tWwna91cPRG87yaNUxGneI6MICgXVQF4PtEfasD0f5LM+vig==</string>
+    <string name="value_sign">MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAL84SJmq0lXkAFvyYuZTjPNnUUdtf/BMAxhAvSnjWW/HQcDRRO26dn0N7uj1SduztxA+T3/65ww3LdccJQ5PmtAkTULx+y9X35UCxcU9TIVu6mmGRhoJshOcTOi7tHyA3HNOPf0tlBLgqCOMAzvMe1zxqG8eTdeeg9g54+4yDsH1AgMBAAECgYAbtDTYhqY4qXLf32sywZIfRa3B8nxhvTGJlv+RDQ5NIopFPEyHQMef8J/Xgooz2YLBSLXN7fUBkREEJGC+BQyBsROg7GsavbwJgcaE6L2dUq8b7IYdaDBiyo70BvkqMIgKidowYFSzb/lhVcWrlBu0MOFVdHJjLnvP2LRmqS1ndQJBAPHLR9utMSMPZeuZFho43SmTrfrSSmoWIed+Zpr4/sgZ9gZcfcARRgcpxPJcKGigvwCFBUUoiuaGi3wqLmjqp68CQQDKdFaX6Hp5+cCNnbBDLIOfPnNnzuOYAvb+A6I9tfyOnNJ7cE6WHOswqk78QDwii6N0DK0D8B1S4j+Yzvwp/DWbAkBIwlwAPdCgdTy9NZbSEzRyE29yH5+m5rwTFhU4Ix9ABZfj+CcbCdehxi7uo07BlUWEmYKpefa6QdhtZ6AJkDsfAkApFTCZROjNpbvIQQ6KoxbWksKydw5CQ5/BbhVXNn3YpsQjnmekGJw1VOoQUCyjyfhSTVwyp2Ab+KN1K9OJ5Y8vAkEAzt9V2Q4gSRN+jRIUAFRfBYKX2RwwvtzNBlXvZRWfuluH++rIYDM7wxFJXlEDRQ1UKhsqkmDJOhHPkbbFBKX/rg==</string>
+</resources>

@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/app_eb_background_style"
+              android:orientation="vertical">
+
+    <include
+        layout="@layout/app_small_title_layout"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:id="@+id/personal_setting_header"
+                style="@style/SettingItemHeightStyle">
+
+                <LinearLayout
+                    style="@style/ListItemSplitStyleFull"
+                    android:layout_alignParentTop="true" />
+
+                <TextView
+                    style="@style/PersonalSettingNoDrawableTextStyle"
+                    android:text="头像" />
+
+                <ImageView
+                    android:id="@+id/setting_user_header"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@mipmap/no_user_header"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"/>
+
+                <LinearLayout style="@style/SettingLineStyle" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/personal_setting_number"
+                style="@style/SettingItemHeightStyle">
+
+                <TextView
+                    style="@style/SettingTextStyle"
+                    android:text="手机号" />
+
+                <LinearLayout
+                    style="@style/ListItemSplitStyleFull"
+                    android:layout_alignParentBottom="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/personal_setting_password"
+                style="@style/SettingItemHeightStyle">
+
+                <TextView
+                    style="@style/SettingTextStyle"
+                    android:text="修改密码" />
+
+                <LinearLayout
+                    style="@style/ListItemSplitStyleFull"
+                    android:layout_alignParentBottom="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/personal_setting_name"
+                style="@style/SettingItemHeightStyle"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    style="@style/ListItemSplitStyleFull"
+                    android:layout_alignParentTop="true" />
+
+                <TextView
+                    android:id="@+id/setting_user_name"
+                    style="@style/PersonalSettingNoDrawableTextStyle"
+                    android:text="昵称" />
+
+                <EditText
+                    android:id="@+id/setting_user_name_context"
+                    style="@style/PersonalSettingEditTextStyle"
+                    android:hint="设置昵称"
+                    android:layout_toRightOf="@id/setting_user_name"/>
+
+                <LinearLayout style="@style/SettingLineStyle" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/personal_setting_sax"
+                style="@style/SettingItemHeightStyle">
+
+                <LinearLayout
+                    style="@style/ListItemSplitStyleFull"
+                    android:layout_alignParentTop="true" />
+
+                <TextView
+                    android:id="@+id/setting_user_sex"
+                    style="@style/PersonalSettingNoDrawableTextStyle"
+                    android:text="性别" />
+
+                <EditText
+                    android:id="@+id/setting_user_sex_context"
+                    style="@style/PersonalSettingEditTextStyle"
+                    android:hint="设置性别"
+                    android:layout_toRightOf="@id/setting_user_sex"/>
+
+                <LinearLayout style="@style/SettingLineStyle" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/personal_setting_age"
+                style="@style/SettingItemHeightStyle">
+
+                <LinearLayout
+                    style="@style/ListItemSplitStyleFull"
+                    android:layout_alignParentTop="true" />
+
+                <TextView
+                    android:id="@+id/setting_user_age"
+                    style="@style/PersonalSettingNoDrawableTextStyle"
+                    android:text="年龄" />
+
+                <EditText
+                    android:id="@+id/setting_user_age_context"
+                    style="@style/PersonalSettingEditTextStyle"
+                    android:hint="设置年龄"
+                    android:layout_toRightOf="@id/setting_user_age"/>
+
+                <LinearLayout style="@style/SettingLineStyle" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/personal_setting_auth"
+                style="@style/SettingItemHeightStyle"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    style="@style/ListItemSplitStyleFull"
+                    android:layout_alignParentTop="true" />
+
+                <TextView
+                    android:id="@+id/setting_user_auth"
+                    style="@style/SettingTextStyle"
+                    android:text="身份认证" />
+
+                <LinearLayout style="@style/SettingLineStyle" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/personal_setting_job"
+                style="@style/SettingItemHeightStyle">
+
+                <LinearLayout
+                    style="@style/ListItemSplitStyleFull"
+                    android:layout_alignParentTop="true" />
+
+                <TextView
+                    android:id="@+id/setting_user_job"
+                    style="@style/PersonalSettingNoDrawableTextStyle"
+                    android:text="职业" />
+
+                <EditText
+                    android:id="@+id/setting_edit_job"
+                    style="@style/PersonalSettingEditTextStyle"
+                    android:hint="填写职业，发现同行"
+                    android:layout_toRightOf="@id/setting_user_job"/>
+
+                <LinearLayout style="@style/SettingLineStyle" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/personal_setting_company"
+                style="@style/SettingItemHeightStyle">
+
+                <LinearLayout
+                    style="@style/ListItemSplitStyleFull"
+                    android:layout_alignParentTop="true" />
+
+                <TextView
+                    android:id="@+id/setting_user_company"
+                    style="@style/PersonalSettingNoDrawableTextStyle"
+                    android:text="公司" />
+
+                <EditText
+                    android:id="@+id/setting_edit_company"
+                    style="@style/PersonalSettingEditTextStyle"
+                    android:hint="填写公司，发现同事"
+                    android:layout_toRightOf="@id/setting_user_company"/>
+
+                <LinearLayout style="@style/SettingLineStyle" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/personal_setting_school"
+                style="@style/SettingItemHeightStyle">
+
+                <LinearLayout
+                    style="@style/ListItemSplitStyleFull"
+                    android:layout_alignParentTop="true" />
+
+                <TextView
+                    android:id="@+id/setting_user_school"
+                    style="@style/PersonalSettingNoDrawableTextStyle"
+                    android:text="学校" />
+
+                <EditText
+                    android:id="@+id/setting_edit_shchool"
+                    style="@style/PersonalSettingEditTextStyle"
+                    android:hint="--"
+                    android:layout_toRightOf="@id/setting_user_school"/>
+
+                <LinearLayout style="@style/SettingLineStyle" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/personal_setting_email"
+                style="@style/SettingItemHeightStyle">
+
+                <LinearLayout
+                    style="@style/ListItemSplitStyleFull"
+                    android:layout_alignParentTop="true" />
+
+                <TextView
+                    android:id="@+id/setting_user_email"
+                    style="@style/PersonalSettingNoDrawableTextStyle"
+                    android:text="邮箱" />
+
+                <EditText
+                    android:id="@+id/setting_edit_email"
+                    style="@style/PersonalSettingEditTextStyle"
+                    android:hint="--"
+                    android:layout_toRightOf="@id/setting_user_email"/>
+
+                <LinearLayout style="@style/SettingLineStyle" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/personal_setting_sign"
+                style="@style/SettingSignItemHeightStyle"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    style="@style/ListItemSplitStyleFull"
+                    android:layout_alignParentTop="true" />
+
+                <TextView
+                    android:id="@+id/setting_user_explain"
+                    style="@style/PersonalSettingNoDrawableTextStyle"
+                    android:text="个人说明" />
+
+                <EditText
+                    android:id="@+id/setting_edit_explain"
+                    style="@style/PersonalSettingEditTextStyle"
+                    android:hint="--"
+                    android:layout_toRightOf="@id/setting_user_explain"/>
+
+                <LinearLayout style="@style/SettingLineStyle" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/line_mine_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:background="@color/login_regist"
+                android:orientation="horizontal" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

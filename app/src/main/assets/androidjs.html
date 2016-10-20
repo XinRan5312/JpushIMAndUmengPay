@@ -1,0 +1,27 @@
+﻿<html>  
+<body>  
+<script language="javascript">  
+function java2js(isHide) {  
+ var x = document.getElementById('div');  
+ if(isHide==0)  
+  x.className = "";  
+ else  
+  x.className = "hide";  
+}  
+  
+function js2java() {  
+ JSInterface2.javaFunction();  
+}  
+</script>  
+<style type="text/css">  
+.hide {  
+display:none;  
+}  
+</style>  
+  
+<a href="#" onClick="js2java()">js2java</a>  
+  
+<div class="hide" id="div">  
+<font color="#FF0000">this is a hide div~~~~</font>  
+</div>  
+</body>

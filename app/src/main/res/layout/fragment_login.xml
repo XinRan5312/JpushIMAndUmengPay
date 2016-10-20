@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/login_farg"
+    android:layout_marginRight="@dimen/login_farg"
+    android:layout_marginTop="@dimen/login_farg_top"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_login_tel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:ems="11"
+                android:gravity="bottom"
+                android:hint="@string/my_tel"
+                android:inputType="number"
+                android:textColor="@color/login_regist"
+                android:textColorHint="@color/login_regist" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/codoon_split_edge">
+
+            </View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/line_pwd"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_login_pwd"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="bottom"
+                    android:hint="@string/my_pwd"
+                    android:inputType="textPassword"
+                    android:textColor="@color/login_regist"
+                    android:textColorHint="@color/login_regist" />
+
+                <TextView
+                    android:id="@+id/tv_forgetPwd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:background="@drawable/tv_forget"
+                    android:text="@string/forget_pwd"
+                    android:textColor="@color/login_regist" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginRight="@dimen/line_view"
+                android:background="@color/codoon_split_edge">
+
+            </View>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/btn_login"
+            android:layout_marginRight="@dimen/btn_login"
+            android:layout_marginTop="@dimen/btn_login_top"
+            android:background="@drawable/btn_shape_corner"
+            android:text="@string/login"
+            android:textColor="@color/btn_text_color" />
+
+        <include layout="@layout/login_third" />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.PwdRestActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/seek_title">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/seek_pwd"
+                android:textColor="@color/login_regist"
+                android:textSize="@dimen/tv_forget" />
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/ima_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/reset_back"
+            android:src="@mipmap/back" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/reset_margin"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/et_seek_tel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/reset_phone_margin"
+            android:background="@null"
+            android:hint="@string/seek_tel"
+            android:inputType="number"
+            android:textColorHint="@color/reset_pwd" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/reset_devider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/reset_code_top"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_seek_code"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/reset_phone_margin"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/seek_code"
+                android:inputType="number"
+                android:textColorHint="@color/reset_pwd" />
+
+            <TextView
+                android:id="@+id/tv_gain_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/tv_forget"
+                android:gravity="center_vertical"
+                android:text="@string/gain_code"
+                android:textColor="@color/reset_pwd" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="@dimen/reset_view_bottom"
+            android:layout_marginRight="@dimen/reset_view_right"
+            android:background="@color/reset_devider" />
+
+        <EditText
+            android:id="@+id/et_seek_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/reset_phone_margin"
+            android:background="@null"
+            android:hint="@string/seek_new_pwd"
+            android:inputType="textPassword"
+            android:textColorHint="@color/reset_pwd" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/reset_devider" />
+
+        <Button
+            android:id="@+id/btn_agree_reset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/btn_reset"
+            android:background="@drawable/btn_shape_corner"
+            android:text="@string/agree_reset"
+            android:textColor="@color/btn_text_color" />
+
+    </LinearLayout>
+
+</LinearLayout>

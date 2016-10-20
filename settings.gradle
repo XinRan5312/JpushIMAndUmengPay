@@ -1,0 +1,2 @@
+include ':app', ':RongIM'
+include ':weiboSDK'

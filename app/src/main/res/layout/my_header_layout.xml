@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/my_header_layout_background">
+
+    <!--<ImageView-->
+        <!--android:id="@+id/my_header_img"-->
+        <!--android:layout_width="60dp"-->
+        <!--android:layout_height="60dp"-->
+        <!--android:src="@mipmap/no_user_header"-->
+        <!--android:scaleType="centerCrop"/>-->
+
+
+    <com.engloryintertech.small.ui.CircleImageView
+        android:id="@+id/my_header_img"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:src="@mipmap/no_user_header"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/my_header_number_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#f9b500"
+        android:text="1520123****"
+        android:layout_toRightOf="@id/my_header_img"
+        android:layout_marginLeft="10dp"
+        android:layout_alignTop="@id/my_header_img"
+        android:layout_marginTop="5dp"
+        android:textSize="16sp"
+        android:ellipsize="end"
+        android:maxLines="1"/>
+
+    <TextView
+        android:id="@+id/my_header_local_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#f9b500"
+        android:text="北京市海淀区上地南路归爪城什么什么的"
+        android:layout_toRightOf="@id/my_header_img"
+        android:layout_marginLeft="10dp"
+        android:layout_alignBottom="@id/my_header_img"
+        android:layout_marginBottom="5dp"
+        android:textSize="13sp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:maxWidth="180dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_toRightOf="@id/my_header_number_textview"
+        android:layout_marginLeft="15dp"
+        android:layout_alignBottom="@id/my_header_number_textview"
+        android:layout_alignTop="@id/my_header_number_textview">
+
+        <ImageView
+            android:id="@+id/my_header_approve_personal_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/card_h"
+            android:scaleType="centerCrop"/>
+
+        <ImageView
+            android:id="@+id/my_header_authority_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/jiangbei_l"
+            android:scaleType="centerCrop"
+            android:layout_marginLeft="5dp"/>
+
+        <ImageView
+            android:id="@+id/my_header_numberapprove_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/phone_l"
+            android:scaleType="centerCrop"
+            android:layout_marginLeft="5dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

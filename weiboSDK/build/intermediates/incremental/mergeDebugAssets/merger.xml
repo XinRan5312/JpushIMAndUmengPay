@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/Users/xinran/englory_space/SMall20161017/weiboSDK/src/main/assets"/><source path="/Users/xinran/englory_space/SMall20161017/weiboSDK/build/generated/assets/shaders/debug"/></dataSet><dataSet config="debug"><source path="/Users/xinran/englory_space/SMall20161017/weiboSDK/src/debug/assets"/></dataSet></merger>

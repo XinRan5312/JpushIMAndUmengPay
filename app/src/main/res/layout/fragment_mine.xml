@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/app_eb_background_style"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/my_header_personalsetting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#333333"
+                android:text="个人设置"
+                android:layout_marginBottom="6dp"
+                android:textSize="13sp"
+                android:gravity="end"
+                android:layout_marginRight="6dp"/>
+
+            <LinearLayout
+                android:id="@+id/line_mine_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="23dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="40dp">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/login_regist">
+
+                <com.engloryintertech.small.ui.CustomGridView
+                    android:id="@+id/gv_mine"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:horizontalSpacing="0.0dip"
+                    android:listSelector="@drawable/gridview_selector"
+                    android:numColumns="3"
+                    android:scrollbars="none"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="0.0dip">
+
+                </com.engloryintertech.small.ui.CustomGridView>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/line_mine_money"
+                style="@style/SettingItemHeightStyle"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    style="@style/ListItemSplitStyleFull"
+                    android:layout_alignParentTop="true" />
+
+                <TextView
+                    style="@style/SettingTextStyle"
+                    android:text="@string/mine_money" />
+
+                <LinearLayout style="@style/SettingLineStyle" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/line_mine_sport"
+                style="@style/SettingItemHeightStyle">
+
+                <TextView
+                    style="@style/SettingTextStyle"
+                    android:text="@string/mine_sport" />
+
+                <LinearLayout
+                    style="@style/ListItemSplitStyleFull"
+                    android:layout_alignParentBottom="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/line_mine_setting"
+                style="@style/SettingItemHeightStyle"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    style="@style/ListItemSplitStyleFull"
+                    android:layout_alignParentTop="true" />
+
+                <TextView
+                    style="@style/SettingTextStyle"
+                    android:text="@string/mine_setting" />
+
+                <LinearLayout style="@style/SettingLineStyle" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/line_mine_question"
+                style="@style/SettingItemHeightStyle">
+
+                <TextView
+                    style="@style/SettingTextStyle"
+                    android:text="@string/mine_question" />
+
+                <LinearLayout style="@style/SettingLineStyle" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/line_mine_about"
+                style="@style/SettingItemHeightStyle">
+
+                <TextView
+                    style="@style/SettingTextStyle"
+                    android:text="@string/mine_about" />
+
+                <LinearLayout
+                    style="@style/ListItemSplitStyleFull"
+                    android:layout_alignParentBottom="true" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

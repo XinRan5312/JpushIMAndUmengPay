@@ -1,0 +1,64 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        applicationId "com.engloryintertech.small"
+        minSdkVersion 18
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'armeabi-v8a' ,'x86', 'x86_64'
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : applicationId,
+                JPUSH_APPKEY : "3e92f96d978c88a6f2e59584", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+        ]
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    //配合友盟实行多渠道包
+    productFlavors {
+
+        wandoujia {}
+        baidu {}
+        c360 {}
+        uc {}
+
+        productFlavors.all { flavor ->
+            flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+        }
+
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.2.0'
+    compile 'com.android.support:design:23.1.1'
+    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+    compile 'de.greenrobot:greendao:2.1.0'
+    compile 'com.orhanobut:dialogplus:1.11'
+    compile 'com.google.code.gson:gson:2.7'
+    compile 'com.zhy:percent-support-extends:1.0.1'
+    compile files('libs/AMap_Location_V2.7.0_20160726.jar')
+    compile 'cn.jiguang:jpush:2.2.0'
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile files('libs/libammsdk.jar')
+    compile files('libs/mta-sdk-1.6.2.jar')
+    compile files('libs/open_sdk.jar')
+    compile files('libs/AMap_Search_V3.4.0_20160811.jar')
+    compile project(':weiboSDK')
+    compile project(':RongIM')
+}

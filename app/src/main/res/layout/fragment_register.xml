@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/register_frag"
+    android:layout_marginRight="@dimen/register_frag"
+    android:layout_marginTop="@dimen/register_frag_top"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_regist_tel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:ems="11"
+                android:hint="@string/my_tel"
+                android:inputType="number"
+                android:textColor="@color/login_regist"
+                android:textColorHint="@color/login_regist" />
+                
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/login_regist" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/line_code"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_regist_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="@string/verification_code"
+                    android:inputType="number"
+                    android:textColor="@color/login_regist"
+                    android:textColorHint="@color/login_regist" />
+
+                <TextView
+                    android:id="@+id/tv_regist_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tv_forget"
+                    android:gravity="center_vertical"
+                    android:text="@string/gain_code"
+                    android:textColor="@color/login_regist" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginRight="@dimen/regist_view"
+                android:background="@color/login_regist" />
+
+            <EditText
+                android:id="@+id/et_regist_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/regist_pwd_top"
+                android:background="@null"
+                android:hint="@string/my_pwd"
+                android:inputType="textPassword"
+                android:textColor="@color/login_regist"
+                android:textColorHint="@color/login_regist" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/login_regist" />
+
+            <Button
+                android:id="@+id/btn_regist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/btn_regist"
+                android:layout_marginRight="@dimen/btn_regist"
+                android:layout_marginTop="@dimen/btn_regist_top"
+                android:background="@drawable/btn_shape_corner"
+                android:text="@string/register"
+                android:textColor="@color/btn_text_color" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

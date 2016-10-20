@@ -1,0 +1,281 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title></title>
+    <link rel="stylesheet" href="../../css/css.css"/>
+    <link rel="stylesheet" href="../../css/common.css"/>
+    <script src="../../js/lib/zepto.min.js"></script>
+    <script src="../../js/lib/script.js"></script>
+</head>
+<body>
+<div id="pageBg">
+    <div id="header">
+        <img src="../../img/backImg.png" alt="" @click="backIos()"/>
+        <p>我的订单</p>
+    </div>
+    <div id="tabNav">
+        <ul>
+            <li v-bind:class="{ 'checkedOn':tabLeftView==currentView}" v-on:click="toggleTabs(tabLeftView);"><p>购买订单</p></li>
+            <li v-bind:class="{ 'checkedOn':tabRightView==currentView}" v-on:click="toggleTabs(tabRightView);"><p>出售订单</p></li>
+        </ul>
+    </div>
+    <div id="tabMain">
+        <template id="buyList">
+            <div class="emptyBox BGfff" v-if="list.length == 0">
+                <img src="../../img/empty.png" alt=""/>
+                <p>亲，您还没有相关订单哦。</p>
+                <p>快去发布需求吧！</p>
+            </div>
+            <div class="tabMainBox" id="buyOrder" v-else>
+                <div class="delStyle BGfff marginTop10" v-for="item in list">
+                    <div class="orderMain "  v-on:click="orderDetail(item.OrderListId)">
+                        <div><img :src="item.SortListImg"></div>
+                        <ul>
+                            <li><p>{{item.SortListName}}</p><span>{{item.ServiceHour}}小时</span></li>
+                            <li><span>服务时间：{{item.ServiceStartTime}}</span></li>
+                        </ul>
+                        <h1>{{item.OrderState}}</h1>
+                    </div>
+                    <h2 class="borderBottom">
+                        <p class="fr" @click="delOrderAlert(item.OrderListId)">删除</p>
+                    </h2>
+                </div>
+                <div class="delBoxAlert" v-show="delState">
+                    <div class="delBg" @click="delOrder"></div>
+                    <div class="delBox">
+                        <img src="../../img/del.png" @click="delOrder">
+                        <div>
+                            <p>你确定要删除该订单吗？</p>
+                            <h1 v-on:click="deleteOrder()">确定</h1>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="messageShow" v-show="messageShow || messageHide">
+                    <div></div>
+                    <p>{{message}}</p>
+                </h3>
+            </div>
+        </template>
+        <template id="saleList">
+            <div class="emptyBox BGfff" v-if="list.length == 0">
+                <img src="../../img/empty.png" alt=""/>
+                <p>亲，您还没有相关订单哦。</p>
+                <p>快去发布需求吧！</p>
+            </div>
+            <div class="tabMainBox" id="saleOrder" v-else>
+                <div class="delStyle BGfff marginTop10" v-for="item in list">
+                    <div class="orderMain "  v-on:click="orderDetail(item.OrderListId)">
+                        <div><img :src="item.SortListImg"></div>
+                        <ul>
+                            <li><p>{{item.SortListName}}</p><span>{{item.ServiceHour}}小时</span></li>
+                            <li><span>服务时间：{{item.ServiceStartTime}}</span></li>
+                        </ul>
+                        <h1>{{item.OrderState}}</h1>
+                    </div>
+                    <h2 class="borderBottom">
+                        <p class="fr" @click="delOrderAlert(item.OrderListId)">删除</p>
+                    </h2>
+                </div>
+                <div class="delBoxAlert" v-show="delState">
+                    <div class="delBg" @click="delOrder"></div>
+                    <div class="delBox">
+                        <img src="../../img/del.png" @click="delOrder">
+                        <div>
+                            <p>你确定要删除该订单吗？</p>
+                            <h1 v-on:click="deleteOrder()">确定</h1>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="messageShow" v-show="messageShow || messageHide">
+                    <div></div>
+                    <p>{{message}}</p>
+                </h3>
+            </div>
+        </template>
+        <component :is="currentView" transition="fade" transition-mode="out-in" keep-alive></component>
+    </div>
+
+</div>
+<script src="../../js/lib/vue.min.js"></script>
+<script src="../../js/lib/vue-resource.min.js"></script>
+<script src="../../js/lib/vue-validator.min.js"></script>
+<script src="../../js/params-config.js"></script>
+<script src="../../js/vue-common.js"></script>
+<script>
+    var tabLeftBox = Vue.extend({
+        template: "#buyList",
+        data:function(){
+            return{
+                list:'',
+                delState:false,
+                delOrderId:"",
+                message:"",
+                messageShow:false
+            }
+        },
+        created: function () {
+            var _self = this;
+            _self.$http.get(webapp.getUrl("order/getorderlist"),
+                    {
+                        params: {
+                            ordertype:1,
+                            orderlistid:0
+                        }
+                    }).then(function (response) {
+                        // 响应成功回调
+                        if(response.data.Result == "Success"){
+                            _self.list=response.data.OrderList;
+                            console.log(response.data.OrderList)
+                        }
+                        for(i=0;i<_self.list.length;i++){
+                            console.log( _self.list[i].OrderState);
+                            _self.list[i].OrderState =  paramsConfig.getTargetById(paramsConfig.OrderStateNum, _self.list[i].OrderState).textType;
+                            console.log( _self.list[i].OrderState);
+                        }
+                    }, function (response) {
+                        // 响应错误回调
+                    }).catch(function (response) {
+                        // 响应异常回调
+                        console.log(response)
+                    });
+        },
+        methods: {
+            orderDetail:function(orderDetailId){
+                window.location.href = "orderDetail.html?orderDetail="+orderDetailId+"&orderTypeData=1";
+            },
+            deleteOrder:function(orderId){
+                console.log(this.delOrderId);
+                var _self = this;
+                _self.$http.get(webapp.getUrl("order/deleteorder"),
+                        {
+                            params: {
+                                orderlistid:this.delOrderId
+                            }
+                        }).then(function (response) {
+                            // 响应成功回调
+                            console.log(response.data);
+                            _self.delState = false;
+                            _self.message = response.data.Message;
+                            _self.messageShow = true;
+                            setTimeout( function(){
+                                _self.messageShow = false;
+                            }, 2 * 1000 );
+                        }, function (response) {
+                            // 响应错误回调
+                        }).catch(function (response) {
+                            // 响应异常回调
+                            console.log(response)
+                        });
+            },
+            delOrder:function(){
+                this.delState = false;
+            },
+            delOrderAlert:function(delOrderId){
+                console.log(delOrderId);
+                this.delOrderId = delOrderId;
+                this.delState = true;
+            },
+        }
+    });
+    var tabRightBox = Vue.extend({
+        template: "#saleList",
+        data:function(){
+            return {
+                list:'',
+                delState:false,
+                delOrderId:"",
+                message:"",
+                messageShow:false,
+            }
+        },
+        created: function () {
+            var _self = this;
+            _self.$http.get(webapp.getUrl("order/getorderlist"),
+                    {
+                        params: {
+                            ordertype:2,
+                            orderlistid:0
+                        },
+                    }).then(function (response) {
+                        // 响应成功回调
+                        if(response.data.Result == "Success"){
+                            _self.list=response.data.OrderList;
+                        }
+                        for(i=0;i<_self.list.length;i++){
+                            _self.list[i].OrderState =  paramsConfig.getTargetById(paramsConfig.OrderStateNum, _self.list[i].OrderState).textType;
+                        }
+                    }, function (response) {
+                        // 响应错误回调
+                    }).catch(function (response) {
+                        // 响应异常回调
+                        console.log(response)
+                    });
+        },
+        methods: {
+            orderDetail:function(orderDetailId){
+                window.location.href = "orderDetail.html?orderDetail="+orderDetailId+"&orderTypeData=2";
+            },
+            deleteOrder:function(orderId){
+                console.log(this.delOrderId);
+                var _self = this;
+                _self.$http.get(webapp.getUrl("order/deleteorder"),
+                        {
+                            params: {
+                                orderlistid:this.delOrderId,
+                            }
+                        }).then(function (response) {
+                            // 响应成功回调
+                            console.log(response.data);
+                            _self.delState = false;
+                            _self.message = response.data.Message;
+                            _self.messageShow = true;
+                            setTimeout( function(){
+                                _self.messageShow = false;
+                            }, 2 * 1000 );
+                        }, function (response) {
+                            // 响应错误回调
+                        }).catch(function (response) {
+                            // 响应异常回调
+                            console.log(response)
+                        });
+            },
+            delOrder:function(){
+                this.delState = false;
+            },
+            delOrderAlert:function(delOrderId){
+                console.log(delOrderId);
+                this.delOrderId = delOrderId;
+                this.delState = true;
+            },
+
+        },
+    });
+    var tab = new Vue({
+        el: "#pageBg",
+        data: {
+            tabLeftView: "tabLeft",
+            tabRightView: "tabRight",
+            currentView: 'tabLeft' //默认
+        },
+        //局部注册组件
+        components: {
+            tabLeft: tabLeftBox,
+            tabRight: tabRightBox
+        },
+        methods: {
+            //绑定tab的切换事件
+            toggleTabs: function (tabView) {
+                //切换模板
+                this.currentView = tabView;
+            },
+            backIos:function(){
+                console.log(1);
+                window.toNative.activityFinish();
+            }
+        }
+    });
+</script>
+</body>
+</html>

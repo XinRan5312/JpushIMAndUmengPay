@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/third_top"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/login_regist" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/third_text"
+            android:gravity="center_horizontal"
+            android:text="请选择登录方式"
+            android:textColor="@color/login_regist"
+            android:textSize="@dimen/third_text_size" />
+            
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/login_regist" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/third_login"
+        android:layout_marginRight="@dimen/third_login">
+
+        <ImageView
+            android:id="@+id/ima_wx"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/third_login_heigh"
+            android:layout_weight="1"
+            android:src="@mipmap/login_wx" />
+
+        <ImageView
+            android:id="@+id/ima_qq"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/third_login_heigh"
+            android:layout_weight="1"
+            android:src="@mipmap/login_qq" />
+
+        <ImageView
+            android:id="@+id/ima_sina"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/third_login_heigh"
+            android:layout_weight="1"
+            android:src="@mipmap/login_sina" />
+
+    </LinearLayout>
+
+</LinearLayout>

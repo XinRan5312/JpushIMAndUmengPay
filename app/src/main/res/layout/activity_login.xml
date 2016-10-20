@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rela_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.LoginActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/xiazai">
+
+    </android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:id="@+id/line_shape"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/line_fragment"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/frame"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/login"
+                android:textColor="@color/btn_text_color"
+                android:textSize="@dimen/text_login_regist" />
+
+            <View
+                android:id="@+id/view_login"
+                android:layout_width="@dimen/view_login_width"
+                android:layout_height="@dimen/view__login_height"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/seek_title" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/register"
+                android:textColor="@color/btn_text_color"
+                android:textSize="@dimen/text_login_regist" />
+
+            <View
+                android:id="@+id/view_register"
+                android:layout_width="@dimen/view_login_width"
+                android:layout_height="@dimen/view__login_height"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/seek_title"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_center"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view__devider"
+        android:layout_centerInParent="true"
+        android:background="@color/btn_text_color" />
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_center">
+
+    </FrameLayout>
+
+    <!--<include-->
+    <!--android:id="@+id/include_third"-->
+    <!--layout="@layout/layout_third_login">-->
+    <!--</include>-->
+
+</RelativeLayout>
